@@ -1,0 +1,92 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>医政问卷对话采集助手隐私政策</title>
+  <style>
+    :root { color-scheme: light; --text:#172033; --muted:#5f6b7a; --line:#d8dee8; --bg:#f7f9fc; --link:#075f9f; }
+    body { margin:0; font:16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif; color:var(--text); background:var(--bg); }
+    main { max-width:920px; margin:0 auto; padding:48px 20px; }
+    article { background:#fff; border:1px solid var(--line); border-radius:8px; padding:28px; }
+    h1 { margin:0 0 12px; font-size:28px; line-height:1.3; }
+    h2 { margin-top:28px; font-size:20px; }
+    p, li { margin:8px 0; }
+    code { padding:2px 5px; border-radius:4px; background:#eef2f7; }
+    a { color:var(--link); }
+    .muted { color:var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1>医政问卷对话采集助手隐私政策</h1>
+      <p class="muted">生效日期：2026 年 6 月 26 日；扩展版本：1.0.4</p>
+      <p>发布主体：南京医科大学医政学院数智健康治理研究课题组</p>
+      <p>伦理审查：南京医科大学伦理委员会，南医大伦审〔2026〕92号，2026年5月27日</p>
+      <p>联系邮箱：sun@njmu.edu.cn</p>
+
+      <h2>1. 扩展用途</h2>
+      <p>医政问卷对话采集助手用于南京医科大学医政学院相关科研问卷项目。在参与者知情并按研究流程授权使用后，扩展会采集参与者在指定医疗大模型网页中产生的当前新完成问答，并提交至项目后端，用于科研数据分析。</p>
+      <p>本扩展不用于商业目的，不展示广告，不销售数据，不用于营销画像，不提供医疗诊断、治疗建议、用药指导或医疗服务。</p>
+
+      <h2>2. 采集的数据</h2>
+      <ul>
+        <li><code>respondentId</code>：问卷系统分配的参与者或答题用户 ID。</li>
+        <li><code>scenarioId</code>：问卷场景 ID。</li>
+        <li><code>purpose</code>：问卷中用于说明本次咨询目的或问题归属的字段。</li>
+        <li><code>modelName</code>：医疗大模型名称，例如 afu、baichuan、lingyi。</li>
+        <li><code>modelConversationId</code>：模型网页会话 ID 或扩展生成的会话标识。</li>
+        <li><code>messages</code>：当前新完成的一组问答，包含参与者问题和模型回答。</li>
+      </ul>
+      <p>扩展还会在本地读取并临时保存 <code>group</code>、<code>taskOrder</code>、<code>apiBaseUrl</code> 等问卷上下文字段，用于校验模型分组、场景切换和采集状态。当前上传接口固定为 <code>https://okrtest.hq-opt.com/api/chat/plugin/latest</code>，不会由 <code>apiBaseUrl</code> 动态改变。</p>
+
+      <h2>3. 不采集的数据</h2>
+      <p>扩展不读取浏览器历史记录、Cookie、密码、支付信息、本地文件、通讯录、地理位置，也不采集与本研究无关的网站内容。</p>
+
+      <h2>4. 工作范围</h2>
+      <ul>
+        <li><code>http://122.152.221.80/*</code>：读取问卷上下文信息和提供插件安装检测。</li>
+        <li><code>https://*.antafu.com/*</code>：采集阿福页面中当前新完成问答。</li>
+        <li><code>https://*.baichuan-ai.com/*</code>：采集百川页面中当前新完成问答。</li>
+        <li><code>https://01.baidu.com/*</code>：采集灵医页面中当前新完成问答。</li>
+        <li><code>https://okrtest.hq-opt.com/*</code>：上传研究数据。</li>
+      </ul>
+
+      <h2>5. 数据传输</h2>
+      <p>扩展通过 HTTPS 接口 <code>https://okrtest.hq-opt.com/api/chat/plugin/latest</code> 上传研究数据；问卷上下文从指定问卷页面读取。</p>
+
+      <h2>6. 数据用途</h2>
+      <p>采集数据仅用于南京医科大学医政学院相关科研问卷项目，包括问卷结果分析、医疗大模型交互行为研究、科研统计和论文或报告所需的汇总分析。</p>
+
+      <h2>7. 数据共享</h2>
+      <p>除课题组及经授权的研究人员外，课题组不会向无关第三方出售或共享原始问答数据。科研发表或报告中使用数据时，应采用汇总、匿名化或去标识化形式。</p>
+
+      <h2>8. 数据保留</h2>
+      <p>数据保留期限请按项目实际管理要求填写。课题组应按照伦理审查、课题方案、学校或学院数据管理制度保留和处理数据。正式发布前请补充保留期限、访问人员范围和撤回、删除或更正流程。</p>
+
+      <h2>9. 参与者权利</h2>
+      <p>参与者可以通过问卷说明或支持邮箱了解数据使用方式。若研究方案允许，参与者可申请撤回、删除或更正相关数据。具体联系邮箱和处理时限请在正式发布前补齐。</p>
+
+      <h2>10. 数据安全</h2>
+      <p>课题组应采取访问控制、权限管理、服务器安全配置和最小化采集等措施保护数据。扩展本身仅在本地临时保存必要的上下文、失败重试队列和去重状态；成功上传后不会在浏览器中长期保存完整原始问答内容。</p>
+      <p>扩展不加载或执行远程代码，不自动提问，不点击医疗大模型网页按钮，不修改网页内容，不显示用户可见的状态弹窗。</p>
+
+      <h2>11. 伦理审查信息</h2>
+      <p>本研究项目“医疗大语言模型作为公众健康助手的可靠性：一项随机对照试验”已由南京医科大学伦理委员会审查。伦理审查报告编号为南医大伦审〔2026〕92号，审查日期为2026年5月27日。项目负责人为孙振宇，研究起止日期为2026年6月至2026年12月。</p>
+      <p>伦理审查意见认为，该研究的实验设计和实施方案充分考虑安全性和公平性原则，受试者招募基于自愿和知情同意原则，并应最大限度保护受试者隐私。</p>
+
+      <h2>12. 政策更新</h2>
+      <p>如果扩展采集范围、后端地址、数据用途或发布主体发生变化，课题组应及时更新本隐私政策，并在问卷或扩展说明中告知参与者。</p>
+
+      <h2>13. 联系方式</h2>
+      <p>发布主体：南京医科大学医政学院数智健康治理研究课题组</p>
+      <p>课题负责人：孙振宇</p>
+      <p>联系邮箱：sun@njmu.edu.cn</p>
+      <p>办公地址：江苏省南京市江宁区龙眠大道101号 南京医科大学医政学院，邮编211166</p>
+    </article>
+  </main>
+</body>
+</html>
+
+
